@@ -1745,7 +1745,8 @@ function Kavo.CreateLib(kavName, themeList)
                     end
                 end)     
 
-                for i,v in next, list do
+                for i, v in pairs(list) do
+				end
                     local optionSelect = Instance.new("TextButton")
                     local UICorner_2 = Instance.new("UICorner")
                     local Sample1 = Instance.new("ImageLabel")
