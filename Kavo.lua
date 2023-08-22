@@ -49,11 +49,50 @@ end
 
 
 local themes = {
-    SchemeColor = Color3.fromRGB(74, 99, 135),
-    Background = Color3.fromRGB(36, 37, 43),
-    Header = Color3.fromRGB(28, 29, 34),
-    TextColor = Color3.fromRGB(255,255,255),
-    ElementColor = Color3.fromRGB(32, 32, 38)
+    SchemeColor = function()
+        if _G.HitboxColor == "Rainbow" then
+            local rainbowColor = rainbowColors[math.floor(tick() * 10) % #rainbowColors + 1]
+            return rainbowColor
+        else
+            return Color3.fromRGB(74, 99, 135)
+        end
+    end,
+
+    Background = function()
+        if _G.HitboxColor == "Rainbow" then
+            local rainbowColor = rainbowColors[math.floor(tick() * 10) % #rainbowColors + 1]
+            return rainbowColor
+        else
+            return Color3.fromRGB(36, 37, 43)
+        end
+    end,
+
+    Header = function()
+        if _G.HitboxColor == "Rainbow" then
+            local rainbowColor = rainbowColors[math.floor(tick() * 10) % #rainbowColors + 1]
+            return rainbowColor
+        else
+            return Color3.fromRGB(28, 29, 34)
+        end
+    end,
+
+    TextColor = function()
+        if _G.HitboxColor == "Rainbow" then
+            local rainbowColor = rainbowColors[math.floor(tick() * 10) % #rainbowColors + 1]
+            return rainbowColor
+        else
+            return Color3.fromRGB(255, 255, 255)
+        end
+    end,
+
+    ElementColor = function()
+        if _G.HitboxColor == "Rainbow" then
+            local rainbowColor = rainbowColors[math.floor(tick() * 10) % #rainbowColors + 1]
+            return rainbowColor
+        else
+            return Color3.fromRGB(32, 32, 38)
+        end
+    end
 }
 local themeStyles = {
     DarkTheme = {
